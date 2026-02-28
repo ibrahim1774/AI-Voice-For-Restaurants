@@ -28,7 +28,7 @@ export default function ThankYouPage() {
 
   return (
     <section className="relative flex min-h-[100dvh] items-center justify-center px-4 py-16 grid-bg overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.06)_0%,transparent_70%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-lg w-full text-center">
@@ -63,7 +63,7 @@ export default function ThankYouPage() {
             href="https://primehubagency.com/success"
             className="inline-block w-full rounded-xl bg-gold px-8 py-4 font-sans text-base font-semibold text-background transition-all duration-300 hover:bg-gold-light hover:scale-[1.02] active:scale-[0.98]"
             style={{
-              boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 0 20px rgba(201, 168, 76, 0.3)",
             }}
           >
             Continue Setup

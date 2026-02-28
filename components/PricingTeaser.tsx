@@ -22,7 +22,7 @@ export default function PricingTeaser() {
         <ScrollReveal>
           <div className="gold-glow-border rounded-3xl p-10 text-center md:p-14 relative overflow-hidden">
             {/* Subtle radial glow inside card */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.04)_0%,transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.06)_0%,transparent_50%)]" />
 
             <div className="relative">
               <p className="font-sans text-sm uppercase tracking-[0.25em] text-gold mb-6">

@@ -123,7 +123,7 @@ export default function BenefitsSection() {
           {BENEFITS.map((benefit) => (
             <ScrollReveal key={benefit.title}>
               <div className="gold-glow-border rounded-2xl p-6 md:p-8 h-full transition-all duration-500">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 text-gold" style={{ boxShadow: "0 0 12px rgba(255, 255, 255, 0.08)" }}>
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 text-gold" style={{ boxShadow: "0 0 12px rgba(201, 168, 76, 0.1)" }}>
                   {benefit.icon}
                 </div>
                 <h3 className="font-serif text-lg font-semibold text-white md:text-xl">

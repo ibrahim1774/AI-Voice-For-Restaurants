@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="relative flex min-h-[100dvh] items-center justify-center px-4 py-4 md:py-12 aurora-bg overflow-hidden">
       {/* Subtle radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(255,255,255,0.06)_0%,transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(201,168,76,0.08)_0%,transparent_70%)]" />
 
       {/* Static ambient orb for depth */}
       <div
@@ -15,7 +15,7 @@ export default function HeroSection() {
           transform: "translateX(-50%)",
           width: "500px",
           height: "400px",
-          background: "rgba(255, 255, 255, 0.03)",
+          background: "rgba(201, 168, 76, 0.04)",
           filter: "blur(60px)",
         }}
       />
@@ -23,7 +23,7 @@ export default function HeroSection() {
       {/* Top edge glow line */}
       <div
         className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"
-        style={{ boxShadow: "0 0 15px rgba(255, 255, 255, 0.15)" }}
+        style={{ boxShadow: "0 0 15px rgba(201, 168, 76, 0.2)" }}
       />
 
       {/* === CONTENT === */}

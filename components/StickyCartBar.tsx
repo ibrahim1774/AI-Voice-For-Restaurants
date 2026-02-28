@@ -76,7 +76,7 @@ export default function StickyCartBar() {
         <div
           className="fixed bottom-0 left-0 right-0 z-40 border-t border-gold/30 bg-background/95 backdrop-blur-md"
           style={{
-            boxShadow: "0 -4px 20px rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 -4px 20px rgba(201, 168, 76, 0.15)",
           }}
         >
           <button
@@ -116,7 +116,7 @@ export default function StickyCartBar() {
           className={`absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto rounded-t-3xl border-t border-gold/20 bg-card custom-scrollbar transition-transform duration-300 ease-out ${isDrawerOpen ? "translate-y-0" : "translate-y-full"
             }`}
           style={{
-            boxShadow: "0 -8px 40px rgba(255, 255, 255, 0.06)",
+            boxShadow: "0 -8px 40px rgba(201, 168, 76, 0.1)",
           }}
         >
           <div className="relative p-6 md:p-10">
@@ -193,7 +193,7 @@ export default function StickyCartBar() {
                   }}
                   className="block w-full rounded-xl bg-gold py-4 text-center font-sans text-base font-semibold text-background transition-all duration-300 hover:bg-gold-light hover:scale-[1.01] active:scale-[0.99]"
                   style={{
-                    boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+                    boxShadow: "0 0 20px rgba(201, 168, 76, 0.3)",
                   }}
                 >
                   Book a Call to Implement This for Your Practice

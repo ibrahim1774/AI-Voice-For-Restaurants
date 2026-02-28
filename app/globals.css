@@ -5,9 +5,9 @@
   --color-charcoal: #141414;
   --color-card: #1a1a1a;
   --color-card-hover: #222222;
-  --color-gold: #ffffff;
-  --color-gold-light: #e0e0e0;
-  --color-gold-dark: #b0b0b0;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8d48b;
+  --color-gold-dark: #a17f1a;
   --color-muted: #a3a3a3;
   --color-subtle: #737373;
   --color-foreground: #ffffff;
@@ -41,19 +41,19 @@ body {
 
 /* Gold accent border card */
 .gold-glow-border {
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.12);
   background: rgba(26, 26, 26, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 255, 255, 0.04),
+    0 0 30px rgba(201, 168, 76, 0.04),
     0 4px 24px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .gold-glow-border:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(201, 168, 76, 0.25);
   background: rgba(34, 34, 34, 0.85);
   box-shadow:
-    0 0 50px rgba(255, 255, 255, 0.08),
+    0 0 50px rgba(201, 168, 76, 0.08),
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -74,12 +74,12 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.3) 30%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0.3) 70%,
+    rgba(201, 168, 76, 0.3) 30%,
+    rgba(201, 168, 76, 0.5) 50%,
+    rgba(201, 168, 76, 0.3) 70%,
     transparent 100%
   );
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
 }
 
 /* Hero background */
@@ -122,8 +122,8 @@ body {
 }
 
 .transcript-bubble-user {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.15);
   border-radius: 16px 16px 4px 16px;
   padding: 12px 16px;
   max-width: 80%;
@@ -140,12 +140,12 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(201, 168, 76, 0.2);
   border-radius: 2px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(201, 168, 76, 0.4);
 }
 
 /* Input focus ring */

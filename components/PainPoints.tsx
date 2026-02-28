@@ -57,7 +57,7 @@ export default function PainPoints() {
                 <p className="mt-3 font-sans text-muted leading-relaxed">
                   {item.detail}
                 </p>
-                <div className="mt-6 h-px w-16 bg-gradient-to-r from-gold/40 to-transparent" style={{ boxShadow: "0 0 8px rgba(255, 255, 255, 0.1)" }} />
+                <div className="mt-6 h-px w-16 bg-gradient-to-r from-gold/40 to-transparent" style={{ boxShadow: "0 0 8px rgba(201, 168, 76, 0.15)" }} />
               </div>
             </ScrollReveal>
           ))}
