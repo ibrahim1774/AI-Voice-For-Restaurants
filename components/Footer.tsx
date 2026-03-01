@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <div className="flex items-center gap-2">
           <span className="font-serif text-lg font-semibold text-white">
-            Dental PrimeHub <span className="text-gold">AI</span>
+            Restaurant PrimeHub <span className="text-gold">AI</span>
           </span>
         </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <p className="font-sans text-sm text-subtle">
-          &copy; {new Date().getFullYear()} Dental PrimeHub AI
+          &copy; {new Date().getFullYear()} Restaurant PrimeHub AI
         </p>
       </div>
     </footer>

@@ -5,28 +5,28 @@ import { usePathname } from "next/navigation";
 import BookingModal from "./BookingModal";
 
 const BENEFITS = [
-  "Never miss another patient call \u2014 24/7 call answering",
+  "Never miss another guest call \u2014 24/7 call answering",
   "Capture every caller\u2019s details automatically",
   "Professional first impression on every call",
-  "Smart appointment scheduling built in",
-  "After-hours and dental emergency call coverage",
-  "Custom-trained AI that knows your dental practice and services",
-  "Dedicated patient lead follow-up app",
+  "Smart reservation scheduling built in",
+  "After-hours and catering inquiry call coverage",
+  "Custom-trained AI that knows your restaurant and menu",
+  "Dedicated lead follow-up app",
   "Replace your expensive answering service",
 ];
 
 const INCLUDED_ITEMS = [
   {
-    feature: "Patient Lead Capture App",
-    detail: "An app for all your patient leads so you can follow up fast",
+    feature: "Lead Capture App",
+    detail: "An app for all your guest leads so you can follow up fast",
   },
   {
     feature: "CRM System",
-    detail: "Manage and organize all your patient leads in one place",
+    detail: "Manage and organize all your guest leads in one place",
   },
   {
     feature: "Dedicated Phone Number",
-    detail: "A real business number connected to your AI dental receptionist",
+    detail: "A real business number connected to your AI restaurant receptionist",
   },
   {
     feature: "24-Hour Setup",
@@ -36,7 +36,7 @@ const INCLUDED_ITEMS = [
   {
     feature: "Custom AI Training",
     detail:
-      "We tailor the AI specifically to your dental practice, services, and patient base",
+      "We tailor the AI specifically to your restaurant, menu, and guest base",
   },
 ];
 
@@ -85,10 +85,10 @@ export default function StickyCartBar() {
           >
             <p className="font-sans text-sm text-muted md:text-base">
               <span className="hidden md:inline">
-                Get a 24/7 AI Receptionist for Your Dental Practice
+                Get a 24/7 AI Receptionist for Your Restaurant
               </span>
               <span className="md:hidden">
-                24/7 AI Dental Receptionist
+                24/7 AI Restaurant Receptionist
               </span>
             </p>
             <span className="shrink-0 rounded-lg bg-gold px-5 py-2.5 font-sans text-sm font-semibold text-background transition-all duration-300 hover:bg-gold-light md:px-6">
@@ -147,17 +147,17 @@ export default function StickyCartBar() {
 
               {/* Header */}
               <h3 className="text-center font-serif text-xl font-bold leading-snug text-white md:text-2xl">
-                A Smart AI Receptionist That Answers Calls &amp; Books Appointments for Your Dental Practice{" "}
+                A Smart AI Receptionist That Answers Calls &amp; Books Reservations for Your Restaurant{" "}
                 <span className="text-gold">
-                  So You Never Lose a Patient to a Missed Call.
+                  So You Never Lose a Guest to a Missed Call.
                 </span>
               </h3>
               <div className="mx-auto mt-3 h-px w-20 bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
               <p className="mt-3 text-center font-sans text-sm leading-relaxed text-muted">
-                Every missed call could be a new patient worth thousands in
-                lifetime value &mdash; patients you&apos;re probably losing while
-                you&apos;re chairside. Implement a foundation part of your
-                dental practice.
+                Every missed call could be a new guest worth hundreds in
+                lifetime value &mdash; guests you&apos;re probably losing while
+                you&apos;re running the floor. Implement a foundation part of your
+                restaurant.
               </p>
 
               {/* Benefits List */}
@@ -225,7 +225,7 @@ export default function StickyCartBar() {
 
               <div className="mt-10 text-center">
                 <p className="font-serif text-2xl font-bold text-white md:text-3xl">
-                  Ready to Stop Missing Patient Calls?
+                  Ready to Stop Missing Guest Calls?
                 </p>
                 <p className="mt-2 font-sans text-sm text-muted">
                   Book a quick call and we&apos;ll have you set up within 24 hours.

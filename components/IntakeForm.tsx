@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import LoadingOverlay from "./LoadingOverlay";
 
 const GOALS = [
-  "Book Appointments",
-  "Answer Patient Questions",
-  "Handle Dental Emergencies",
-  "Recall & Reactivation",
+  "Take Reservations",
+  "Answer Menu Questions",
+  "Handle Catering Inquiries",
+  "Manage Waitlist",
   "Full Front Desk Coverage",
 ];
 
@@ -129,7 +129,7 @@ export default function IntakeForm() {
             <input
               type="text"
               name="practiceName"
-              placeholder="Your Dental Practice Name"
+              placeholder="Your Restaurant Name"
               value={formData.practiceName}
               onChange={handleChange}
               className={inputClasses}
@@ -195,7 +195,7 @@ export default function IntakeForm() {
             disabled={isLoading}
             className="w-full rounded-xl bg-gold px-6 py-3.5 font-sans text-sm font-semibold text-background transition-all duration-300 hover:bg-gold-light hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
           >
-            Generate My AI Dental Receptionist
+            Generate My AI Restaurant Receptionist
           </button>
         </form>
       </div>

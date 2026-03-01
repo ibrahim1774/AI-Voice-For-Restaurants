@@ -3,27 +3,27 @@ import ScrollReveal from "./ScrollReveal";
 const STATS = [
   {
     stat: "40%",
-    headline: "of calls to contractors go unanswered",
+    headline: "of calls to restaurants go unanswered",
     detail:
-      "The average contractor misses nearly half of all incoming calls. Each one of those could be a $2,000, $5,000, or even $10,000 job — gone to your competitor in seconds.",
+      "The average restaurant misses nearly half of all incoming calls. Each one of those could be a $200, $500, or even $5,000 catering order — gone to your competitor in seconds.",
   },
   {
     stat: "80%",
     headline: "of callers won't leave a voicemail",
     detail:
-      "Your voicemail isn't cutting it. Eight out of ten callers will hang up and call the next contractor on the list. By the time you call back, they've already booked someone else.",
+      "Your voicemail isn't cutting it. Eight out of ten callers will hang up and call the next restaurant on the list. By the time you call back, they've already booked somewhere else.",
   },
   {
     stat: "$500",
     headline: "per month for an answering service",
     detail:
-      "Traditional answering services cost $300–500/month and still put callers on hold. They don't know your business, can't book appointments, and call in sick on Mondays.",
+      "Traditional answering services cost $300–500/month and still put callers on hold. They don't know your menu, can't book reservations, and call in sick on Mondays.",
   },
   {
     stat: "24/7",
     headline: "coverage that never sleeps",
     detail:
-      "Dental PrimeHub AI answers instantly, every time. It knows your business, books appointments, takes messages, and never misses a shift. Nights, weekends, holidays — always on.",
+      "Restaurant PrimeHub AI answers instantly, every time. It knows your menu, books reservations, takes messages, and never misses a shift. Nights, weekends, holidays — always on.",
   },
 ];
 

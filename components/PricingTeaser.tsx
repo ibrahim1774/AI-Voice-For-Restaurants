@@ -5,9 +5,9 @@ import ScrollReveal from "./ScrollReveal";
 import BookingModal from "./BookingModal";
 
 const FEATURES = [
-  "Dedicated AI dental receptionist for your practice",
+  "Dedicated AI restaurant receptionist for your business",
   "24/7 coverage \u2014 nights, weekends, holidays",
-  "Patient appointment booking & scheduling",
+  "Reservation booking & scheduling",
   "Call summaries & transcripts",
   "Dedicated phone number",
   "Cancel anytime \u2014 no contracts",
@@ -31,12 +31,12 @@ export default function PricingTeaser() {
 
               <h2 className="font-serif text-4xl font-bold text-white md:text-5xl">
                 Ready to Never Miss
-                <br />a Patient Call Again?
+                <br />a Guest Call Again?
               </h2>
 
               <p className="mt-6 font-sans text-muted max-w-md mx-auto">
-                Everything you need to capture every patient, book every
-                appointment, and grow your dental practice — set up for you
+                Everything you need to capture every guest, book every
+                reservation, and grow your restaurant — set up for you
                 within 24 hours.
               </p>
 

@@ -5,16 +5,16 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-const DENTAL_KNOWLEDGE = {
-  primaryGoal: "Book a patient appointment",
+const RESTAURANT_KNOWLEDGE = {
+  primaryGoal: "Book a reservation",
   keyInfo:
-    "New patient or existing, insurance provider and member ID, reason for visit (cleaning, checkup, toothache, cosmetic consultation, emergency), preferred date/time, any urgency or pain level",
+    "Party size, preferred date and time, any dietary restrictions or allergies, special occasions (birthday, anniversary), indoor or outdoor seating preference, contact name and phone number",
   scenarios:
-    "New patient wanting to book (cleaning, comprehensive exam), existing patient needing follow-up or routine cleaning, insurance verification questions, emergency/urgent visits (toothache, broken tooth, swelling), cosmetic consultations (whitening, veneers, Invisalign), cancellation or rescheduling requests",
+    "New reservation booking, large party or private dining inquiry, menu questions (dietary restrictions, allergens, vegan/gluten-free options), catering requests, hours and location questions, cancellation or modification of existing reservation, waitlist inquiries during peak hours",
   pricingBehavior:
-    'Say "we accept most major dental insurance plans — our front desk team will verify your specific coverage and any copay before your visit"',
+    'Say "we have a range of options on our menu — I can help you with general pricing, but for catering quotes our events team will follow up with a detailed proposal"',
   schedulingNotes:
-    "Differentiate between new patient appointments (longer slots for X-rays and comprehensive exam) and existing patient visits (routine cleanings, follow-ups), ask about morning or afternoon preference",
+    "Differentiate between regular dining reservations and private events or catering. Ask about party size first, then date and time preference, then any special requests",
 };
 
 interface CreateDemoRequest {
@@ -52,39 +52,39 @@ export async function POST(request: NextRequest) {
 
     const primaryGoal = body.goal;
 
-    // Step 1: Generate custom dental receptionist system prompt with Claude
+    // Step 1: Generate custom restaurant receptionist system prompt with Claude
     const claudeResponse = await anthropic.messages.create({
       model: "claude-sonnet-4-5-20250929",
       max_tokens: 1024,
       messages: [
         {
           role: "user",
-          content: `You are an expert at creating AI receptionist system prompts for dental practices. Generate a custom system prompt for this dental practice:
+          content: `You are an expert at creating AI receptionist system prompts for restaurants. Generate a custom system prompt for this restaurant:
 
-Dental Practice Name: "${body.practiceName}"
+Restaurant Name: "${body.practiceName}"
 
-This receptionist answers phone calls for this dental practice. Here is what you need to know:
+This receptionist answers phone calls for this restaurant. Here is what you need to know:
 
-Primary goal selected by the practice: ${primaryGoal}
-Information to gather from callers: ${DENTAL_KNOWLEDGE.keyInfo}
-Common caller scenarios to handle: ${DENTAL_KNOWLEDGE.scenarios}
-How to handle pricing questions: ${DENTAL_KNOWLEDGE.pricingBehavior}
-Scheduling notes: ${DENTAL_KNOWLEDGE.schedulingNotes}
+Primary goal selected by the restaurant: ${primaryGoal}
+Information to gather from callers: ${RESTAURANT_KNOWLEDGE.keyInfo}
+Common caller scenarios to handle: ${RESTAURANT_KNOWLEDGE.scenarios}
+How to handle pricing questions: ${RESTAURANT_KNOWLEDGE.pricingBehavior}
+Scheduling notes: ${RESTAURANT_KNOWLEDGE.schedulingNotes}
 
 The system prompt you generate must:
 
-1. Greet callers warmly using the practice name: "${body.practiceName}"
-2. Sound like a real human dental receptionist — use contractions, casual phrasing, and a friendly, reassuring tone
-3. Follow the dental-specific booking flow above — ask the right questions in a natural conversational order, not all at once
+1. Greet callers warmly using the restaurant name: "${body.practiceName}"
+2. Sound like a real human restaurant host — use contractions, casual phrasing, and a friendly, welcoming tone
+3. Follow the restaurant-specific booking flow above — ask the right questions in a natural conversational order, not all at once
 4. Ask ONE question at a time, wait for the answer, then ask the next
 5. Always work toward the primary goal: "${primaryGoal}" — prioritize this above all else in every conversation
-6. Handle the common dental scenarios listed above naturally — be especially empathetic with patients in pain or dental emergencies
+6. Handle the common restaurant scenarios listed above naturally — be especially helpful with dietary restrictions and special occasions
 7. Use the pricing guidance above when pricing comes up — never make up specific prices
 8. Keep every response to 1-3 sentences max — this is a phone call, not an email
 9. If the caller asks something outside your knowledge, say "Let me have someone from our team get back to you on that — can I grab your name and number?"
 10. Always capture the caller's name and callback number before ending the call
 11. Never mention being AI unless directly asked
-12. Never fabricate information about the practice — don't make up dentist names, office hours, or specific services not mentioned
+12. Never fabricate information about the restaurant — don't make up chef names, hours, or specific menu items not mentioned
 
 Return ONLY the system prompt text. No markdown formatting, no explanations, no quotation marks wrapping it.`,
         },
@@ -100,7 +100,7 @@ Return ONLY the system prompt text. No markdown formatting, no explanations, no 
       throw new Error("Failed to generate system prompt");
     }
 
-    // Step 2: Create Vapi assistant with the custom dental prompt
+    // Step 2: Create Vapi assistant with the custom restaurant prompt
     const vapiResponse = await fetch("https://api.vapi.ai/assistant", {
       method: "POST",
       headers: {
@@ -125,36 +125,33 @@ Return ONLY the system prompt text. No markdown formatting, no explanations, no 
           model: "nova-2",
           language: "en-US",
           keywords: [
-            "dental:2",
-            "dentist:2",
-            "cleaning:2",
-            "checkup:2",
-            "toothache:2",
-            "cavity:2",
-            "filling:2",
-            "crown:2",
-            "root canal:2",
-            "extraction:2",
-            "Invisalign:2",
-            "veneers:2",
-            "whitening:2",
-            "braces:2",
-            "orthodontics:2",
-            "periodontal:2",
-            "gingivitis:2",
-            "implant:2",
-            "dentures:2",
-            "X-ray:2",
-            "fluoride:2",
-            "hygienist:2",
-            "copay:2",
-            "PPO:2",
-            "HMO:2",
-            "Delta Dental:2",
-            "Cigna:2",
-            "Aetna:2",
-            "MetLife:2",
-            "Guardian:2",
+            "reservation:2",
+            "table:2",
+            "party:2",
+            "menu:2",
+            "appetizer:2",
+            "entree:2",
+            "dessert:2",
+            "gluten-free:2",
+            "vegan:2",
+            "vegetarian:2",
+            "allergy:2",
+            "allergen:2",
+            "catering:2",
+            "private dining:2",
+            "waitlist:2",
+            "outdoor:2",
+            "patio:2",
+            "brunch:2",
+            "happy hour:2",
+            "wine:2",
+            "cocktail:2",
+            "takeout:2",
+            "delivery:2",
+            "prix fixe:2",
+            "tasting menu:2",
+            "chef:2",
+            "specials:2",
           ],
         },
         firstMessage: `Thanks for calling ${body.practiceName}, how can I help you today?`,

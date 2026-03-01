@@ -145,14 +145,14 @@ export default function DemoExperience({
         </div>
 
         <h1 className="font-serif text-xl font-bold text-white md:text-3xl">
-          Your AI Dental Receptionist is Ready,{" "}
+          Your AI Restaurant Receptionist is Ready,{" "}
           <span className="text-gold">{practiceName}</span>
         </h1>
 
         <p className="mt-2 font-sans text-sm text-muted max-w-lg mx-auto leading-relaxed">
-          Start a live call with your custom AI dental receptionist. Speak
-          naturally — try booking a cleaning, ask about insurance, or see how it
-          handles a dental emergency.
+          Start a live call with your custom AI restaurant receptionist. Speak
+          naturally — try booking a table, ask about the menu, or see how it
+          handles a catering inquiry.
         </p>
       </div>
 
