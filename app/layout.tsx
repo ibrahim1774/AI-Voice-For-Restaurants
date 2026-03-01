@@ -17,11 +17,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PrimeHub AI | Never Miss a Patient Call Again",
+  title: "Dental PrimeHub AI | Never Miss a Patient Call Again",
   description:
     "Your 24/7 AI dental receptionist answers every call, books patient appointments, handles insurance questions, and manages dental emergencies — so you never lose a patient to a missed call.",
   openGraph: {
-    title: "PrimeHub AI | Never Miss a Patient Call Again",
+    title: "Dental PrimeHub AI | Never Miss a Patient Call Again",
     description:
       "Your 24/7 AI dental receptionist answers every call, books patient appointments, and handles insurance questions — so you never lose a patient to a missed call.",
     type: "website",

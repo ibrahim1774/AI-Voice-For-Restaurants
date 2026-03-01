@@ -29,7 +29,7 @@ export default function HeroSection() {
       {/* Logo */}
       <div className="absolute top-4 left-5 z-20 md:top-6 md:left-8">
         <span className="font-serif text-lg font-bold text-white md:text-xl">
-          PrimeHub <span className="text-gold">AI</span>
+          Dental PrimeHub <span className="text-gold">AI</span>
         </span>
       </div>
 

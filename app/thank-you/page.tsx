@@ -54,7 +54,7 @@ export default function ThankYouPage() {
         </h1>
 
         <p className="mx-auto mt-4 max-w-md font-sans text-base leading-relaxed text-muted">
-          Your PrimeHub AI Receptionist is on the way. Complete the next step
+          Your Dental PrimeHub AI Receptionist is on the way. Complete the next step
           so we can get your system set up within 24 hours.
         </p>
 
