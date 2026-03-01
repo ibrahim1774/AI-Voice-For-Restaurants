@@ -323,7 +323,7 @@ export default function DemoExperience({
           onClick={() => setIsBookingOpen(true)}
           className="block w-full rounded-xl bg-gold py-3.5 text-center font-sans text-sm font-semibold text-background transition-all duration-300 hover:bg-gold-light"
         >
-          Book a Call to Implement This for Your Practice
+          Book a Call to Implement This for {practiceName}
         </button>
       </div>
 
